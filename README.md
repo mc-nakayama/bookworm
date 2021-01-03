@@ -1,24 +1,30 @@
-# README
+# Readme
+ ## DB
+ ### Book
+ |Column|Type|Options|
+ |------|----|-------|
+ |title|string|null:false,unique:true,index:true|
+ |author|string|null:false,index:true|
+ |image|text||
+ |pages|integer||
+ |genre_id|references|foreign_key:true|
+ 
+ ### Meter
+ |start_page|integer||
+ |save_page|integer||
+ |book_id|references|foreign_key:true|
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ ### Memo
+|memo|text|null:false|
+|book_id|references|foreign_key:true|
 
-Things you may want to cover:
+### User
+|name|string|null:false|
+|e-mail|text|null:false,unique:true|
+|password|string|null:false|
+|confirm_password|null:false|
 
-* Ruby version
+### Category
+|genre|string|unique:true|
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
