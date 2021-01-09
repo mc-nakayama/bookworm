@@ -3,11 +3,12 @@
  ### Book
  |Column|Type|Options|
  |------|----|-------|
- |title|string|null:false,unique:true,index:true|
+ |title|string|null:false,index:true|
  |author|string|null:false,index:true|
  |image|text||
  |pages|integer||
  |genre_id|references|foreign_key:true|
+ |user_id|references|foreign_key:true|
  
  ### Meter
  |Column|Type|Options|
